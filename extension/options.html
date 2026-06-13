@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One-Click TikGem — Options</title>
+  <style>
+    :root {
+      --bg: #1c1c1c; --surface: #232323; --surface2: #2a2a2a;
+      --border: #353535; --text: #e9e9e7; --dim: #9a9a95; --accent: #5a82ff;
+      --ok: #2bb38a; --err: #e8736f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .wrap { max-width: 560px; margin: 0 auto; padding: 28px 24px 40px; }
+    header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+    header .logo {
+      width: 26px; height: 26px; border-radius: 7px; background: var(--accent);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 800; font-size: 14px;
+    }
+    header h1 { font-size: 18px; font-weight: 700; margin: 0; }
+    .sub { color: var(--dim); font-size: 13px; margin: 0 0 22px 36px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 18px 6px; margin-bottom: 18px;
+    }
+    .card h2 {
+      font-size: 12px; font-weight: 700; color: var(--dim);
+      text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px;
+    }
+    .field { margin-bottom: 16px; }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+    .desc { font-size: 12px; color: var(--dim); margin: 4px 0 0; }
+    input[type="text"], select {
+      width: 100%; background: var(--surface2); color: var(--text);
+      border: 1px solid var(--border); border-radius: 8px; padding: 9px 11px;
+      font: inherit;
+    }
+    input[type="text"]:focus, select:focus { outline: none; border-color: var(--accent); }
+    .row2 { display: flex; gap: 14px; }
+    .row2 .field { flex: 1; }
+    .num { display: flex; align-items: center; gap: 8px; }
+    .num input { width: 80px; }
+    .num .unit { color: var(--dim); font-size: 13px; }
+    .toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .toggle .label-wrap { flex: 1; }
+    .switch { position: relative; width: 44px; height: 24px; flex: 0 0 auto; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute; inset: 0; cursor: pointer; background: var(--surface2);
+      border: 1px solid var(--border); border-radius: 24px; transition: .18s;
+    }
+    .slider::before {
+      content: ""; position: absolute; height: 16px; width: 16px; left: 3px; top: 3px;
+      background: var(--dim); border-radius: 50%; transition: .18s;
+    }
+    .switch input:checked + .slider { background: var(--accent); border-color: var(--accent); }
+    .switch input:checked + .slider::before { transform: translateX(20px); background: #fff; }
+    .actions { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+    button {
+      border: 1px solid var(--border); border-radius: 8px; padding: 10px 18px;
+      font: inherit; font-weight: 600; cursor: pointer;
+      background: var(--surface2); color: var(--text);
+    }
+    button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    #status { font-size: 13px; min-height: 18px; }
+    #status.ok { color: var(--ok); }
+    #status.err { color: var(--err); }
+    .list-note { font-size: 12px; color: var(--dim); margin-top: 6px; }
+    .list-note a { color: var(--accent); cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="logo">T</span>
+      <h1>One-Click TikGem</h1>
+    </header>
+    <p class="sub">Defaults applied to every task you capture. Inline <code>#tag</code> / <code>+⚡</code> / <code>$🍅</code> syntax in a title still works and merges with these.</p>
+
+    <div class="card">
+      <h2>Task defaults</h2>
+
+      <div class="field">
+        <label for="defTags">Default tags</label>
+        <input id="defTags" type="text" placeholder="e.g. Reading, Web" />
+        <p class="desc">Comma-separated. Added to every captured task (merged with inline #tags).</p>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="defStatus">Default status</label>
+          <select id="defStatus">
+            <option value="">— TikGem default —</option>
+            <option value="Next">Next</option>
+            <option value="Action Planned">Action Planned</option>
+            <option value="Waiting For">Waiting For</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="defContext">Default context</label>
+          <input id="defContext" type="text" placeholder="e.g. Computer" />
+          <p class="desc">Built-ins: Home, Errand, School, Computer. Custom ones are created if new.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="defDue">Default due date</label>
+        <select id="defDue">
+          <option value="none">None</option>
+          <option value="today">Today</option>
+          <option value="tomorrow">Tomorrow</option>
+          <option value="plus">In N days…</option>
+        </select>
+        <div class="num" id="plusWrap" style="display:none; margin-top:8px;">
+          <input id="defDueDays" type="text" inputmode="numeric" value="3" />
+          <span class="unit">days from capture</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="defList">Target list</label>
+        <select id="defList">
+          <option value="">All Tasks (inbox)</option>
+        </select>
+        <p class="list-note">Lists are read from an open TikGem tab. <a id="refreshLists">Refresh lists</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Behavior</h2>
+      <div class="field toggle">
+        <div class="label-wrap">
+          <label for="closeTab" style="margin:0;">Close tab after adding</label>
+          <p class="desc">When you capture a page, close that source tab once the task is added.</p>
+        </div>
+        <span class="switch">
+          <input id="closeTab" type="checkbox" />
+          <span class="slider"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="save" class="primary">Save settings</button>
+      <button id="reset">Reset to defaults</button>
+      <span id="status"></span>
+    </div>
+  </div>
+  <script src="settings.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

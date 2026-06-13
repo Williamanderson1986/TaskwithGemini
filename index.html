@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>One-Click TikGem — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the One-Click TikGem Chrome extension." />
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --border:#262b36; --text:#e9ecf2;
+    --dim:#9aa3b2; --accent:#6f93ff; --accent2:#4a6bf5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:56px 24px 80px}
+  header{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .mark{
+    width:44px;height:44px;border-radius:11px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--accent2),var(--accent));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(74,107,245,.4);
+  }
+  .mark svg{width:26px;height:26px}
+  h1{font-size:26px;font-weight:800;letter-spacing:-.01em}
+  .updated{color:var(--dim);font-size:13px;margin:2px 0 30px 58px}
+  .lede{
+    background:var(--panel);border:1px solid var(--border);border-radius:14px;
+    padding:20px 22px;font-size:16px;color:#cfd6e4;margin-bottom:34px;
+  }
+  h2{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+     color:var(--accent);margin:34px 0 12px}
+  p{margin:0 0 14px;color:#d4dae6}
+  ul{margin:0 0 14px;padding-left:22px}
+  li{margin:0 0 9px;color:#d4dae6}
+  strong{color:#fff}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code{background:#11141a;border:1px solid var(--border);border-radius:6px;
+       padding:1px 6px;font-size:14px;color:#c8d2e6}
+  footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--border);
+         color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2 22 9 12 22 2 9z" fill="#fff" fill-opacity=".95"/>
+          <path d="M12 2 17 9 12 22 7 9z" fill="#dfe7ff"/>
+          <path d="M7.5 10.5l3 3 5.5-6" stroke="#4a6bf5" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <h1>One-Click TikGem — Privacy Policy</h1>
+    </header>
+    <p class="updated">Last updated: June 12, 2026</p>
+
+    <p class="lede">
+      One-Click TikGem is a browser extension that captures the current web page's
+      title and description and adds it as a task to your own TikGem task manager at
+      <a href="https://tikgem.pplx.app">tikgem.pplx.app</a>. It collects no personal
+      data, uses no tracking, and talks to no servers other than your own TikGem app.
+    </p>
+
+    <h2>What the extension accesses</h2>
+    <ul>
+      <li><strong>The page you choose to capture.</strong> When you click the toolbar
+        button, press the keyboard shortcut, or use the “Add page to TikGem” right-click
+        menu item, the extension reads the active tab's title and meta description (and,
+        for the right-click action, an optional text selection or link).</li>
+      <li><strong>Your TikGem tab.</strong> The extension opens or reuses your TikGem tab
+        to add the task and to read your list names so you can pick a target list.</li>
+      <li><strong>Your settings.</strong> Default tags, status, context, due date, target
+        list, and the close-tab toggle are stored in your browser's Chrome sync storage.</li>
+    </ul>
+
+    <h2>What the extension does NOT do</h2>
+    <ul>
+      <li>It does <strong>not</strong> collect, store, or transmit any personal data to the
+        developer or any third party.</li>
+      <li>It does <strong>not</strong> include analytics, tracking, advertising, or remote code.</li>
+      <li>It does <strong>not</strong> read pages in the background — it only reads a page when
+        you explicitly trigger a capture.</li>
+      <li>It communicates with <strong>no servers other than your own TikGem app</strong>
+        (<code>tikgem.pplx.app</code>).</li>
+    </ul>
+
+    <h2>Where your data goes</h2>
+    <p>The captured page title and description are sent only to your own TikGem app, exactly
+      as if you had typed the task yourself. Your settings remain in your own Chrome profile
+      via Chrome sync storage and are never sent anywhere else.</p>
+
+    <h2>Data retention and deletion</h2>
+    <p>The extension keeps no data of its own beyond your settings in Chrome sync storage. To
+      delete your settings, use “Reset to defaults” on the options page or remove the extension.
+      Tasks you create live in your TikGem app and are managed there.</p>
+
+    <h2>Contact</h2>
+    <p>For questions about this policy, contact the developer at
+      <a href="mailto:williamanderson1986@gmail.com">williamanderson1986@gmail.com</a>.</p>
+
+    <footer>
+      One-Click TikGem · <a href="https://tikgem.pplx.app">tikgem.pplx.app</a> ·
+      <a href="https://github.com/Williamanderson1986/TaskwithGemini">Source on GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
