@@ -93,13 +93,16 @@ One-Click TikGem captures the current web page's title and description and adds 
 - "I do not use or transfer user data for purposes unrelated to the item's single purpose" — TRUE.
 
 **Privacy policy URL:**
-A privacy policy URL is required for published items that handle user data. Suggested text is provided in PRIVACY_POLICY.md — host it at a public URL (e.g. a GitHub Pages page or the TikGem site) and paste that URL here.
+```
+https://williamanderson1986.github.io/TaskwithGemini/
+```
+(Hosted via GitHub Pages from https://github.com/Williamanderson1986/TaskwithGemini)
 
 ---
 
 ## Other listing fields
 
 - **Official URL / Homepage:** https://tikgem.pplx.app
-- **Support email:** (your contact email)
+- **Support email:** williamanderson1986@gmail.com
 - **Visibility:** Public (or Unlisted if you want a link-only share)
 - **Distribution:** All regions (or restrict as desired)

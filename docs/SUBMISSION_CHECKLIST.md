@@ -40,16 +40,16 @@ A complete, ready-to-upload package. Work top to bottom in the
 - [ ] **Single purpose:** paste from `listing.md` → Privacy practices.
 - [ ] **Permission justifications:** paste each one from `listing.md`.
 - [ ] **Data usage:** check the boxes per `listing.md` (no PII collected, no remote code, no sale/transfer of data).
-- [ ] **Privacy policy URL:** host `PRIVACY_POLICY.md` at a public URL and paste it.
+- [ ] **Privacy policy URL:** `https://williamanderson1986.github.io/TaskwithGemini/`
+  - Live via GitHub Pages from https://github.com/Williamanderson1986/TaskwithGemini
   - Required because the extension handles user content (captured page data) and settings.
-  - A GitHub Pages page or a page on tikgem.pplx.app both work.
 
 ## 5. Distribution
 
 - [ ] **Visibility:** Public (or Unlisted for link-only).
 - [ ] **Regions:** All (or restrict).
 - [ ] **Official URL / Homepage:** https://tikgem.pplx.app
-- [ ] **Support email:** add your contact email.
+- [ ] **Support email:** williamanderson1986@gmail.com
 
 ## 6. Submit
 
